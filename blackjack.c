@@ -247,18 +247,18 @@ int adjustedCardValue(int card, int currentHandValue)
 int hitAgain()
 {
     //set up a char for a one letter input for hitting, the code does about what you would expect it to 
-    char input[0];
+    char input;
     printf("Would you like to hit? Y or N? ");
     //extra space before %c to prevent the enter key being part of the scanf
-    scanf(" %c", &input[0]);
+    scanf(" %c", &input);
     
     //if player says Y, return 0 to signal player wants to hit again
-    if(input[0] == 'Y')
+    if(input == 'Y')
     {
         return 0;
     }
     //if player says N, return 1 to signal player does not want to hit anymore
-    else if(input[0] == 'N')
+    else if(input == 'N')
     {
         return 1;
     }
